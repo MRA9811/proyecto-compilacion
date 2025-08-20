@@ -2,13 +2,14 @@ name: Build
 
 on:
   push:
-    branches: [ main ]     
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,3 +27,9 @@ jobs:
 
       - name: Build package
         run: python -m build
+
+      - name: Upload dist artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-dist
+          path: dist/*
