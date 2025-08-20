@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proyecto-compilacion"     # puedes cambiarlo si quieres
+version = "0.1.0"
+description = "Demo de compilación con GitHub Actions"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Tu Nombre" }]
+dependencies = []
